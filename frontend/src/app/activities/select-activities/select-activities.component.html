@@ -1,0 +1,12 @@
+<div class="min-h-screen flex justify-center items-center">
+    <form [formGroup]="userSelectionForm" (ngSubmit)="onSubmit()" class="mt-4">
+      <div formArrayName="selectedActivities" class="space-y-2 mb-4">
+        <div *ngFor="let activity of activities; let i = index" class="flex items-center">
+          <input type="checkbox" [formControlName]="i" class="form-checkbox h-5 w-5 text-blue-600">
+          <label class="ml-2">{{ activity.name }} &nbsp; &nbsp;{{ activity.date | date }}</label>
+        </div>
+      </div>
+      <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Submit</button>
+    </form>
+  </div>
+  

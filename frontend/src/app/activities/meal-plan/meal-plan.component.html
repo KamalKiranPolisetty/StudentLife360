@@ -1,0 +1,30 @@
+<div class="container mx-auto my-8 flex flex-col min-h-screen">
+    <div class="flex-grow">
+        <h2 class="text-2xl text-maroon font-semibold mb-4 text-center">Meal Plans</h2>
+        
+        <div class="mb-4 text-center">
+            <label for="duration" class="block text-sm font-medium text-maroon">Duration:</label>
+            <select id="duration" name="duration" [(ngModel)]="duration" class="mt-1 p-2 mx-auto w-1/2 text-marron border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                <option value="month">Monthly</option>
+                <option value="semester">Semester</option>
+            </select>
+        </div>
+        <div *ngIf="duration" class="text-center">
+            <!-- Assuming <app-payment> handles its own styling -->
+            <app-payment (purchaseMealPlan)="purchaseMealPlan()"></app-payment>
+        </div>
+        
+        <div *ngIf="mealPlans.length > 0" class="mt-4">
+            <h3 class="text-lg text-maroon mb-2 text-center">Purchased Meal Plans:</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div *ngFor="let mealPlan of mealPlans" class="bg-white p-4 rounded-lg shadow-md m-2">
+                    <p>Duration: {{ mealPlan.duration }}</p>
+                    <p>Price: ${{ mealPlan.price }}</p>
+                    <p>Last Payment: {{mealPlan.updatedAt | date : "dd/MM/yyyy" }}</p>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="mealPlans.length === 0" class="text-center mt-4">
+            <p>No purchased meal plans found.</p>
+        </div>
+    </div>

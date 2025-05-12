@@ -1,0 +1,12 @@
+<div class="min-h-screen mx-auto">
+    <ul class="divide-y divide-gray-200">
+      <li *ngFor="let activity of userSelectedActivities" class="py-4 flex">
+        <div class="ml-4">
+          <p class="text-sm font-medium text-gray-900">{{ activity.name }}</p>
+          <p class="text-sm text-gray-500">{{ activity.date | date }}</p>
+          <p class="text-sm text-gray-500">{{ activity.location }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  

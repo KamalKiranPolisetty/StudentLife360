@@ -1,0 +1,39 @@
+<div class="flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
+      <h1 class="text-3xl font-semibold mb-8">Payment Details</h1>
+      <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+        <div class="">
+          <label for="cardNumber" class="block text-sm font-medium text-gray-700">Card Number</label>
+          <input type="text" id="cardNumber" name="cardNumber" formControlName="cardNumber" placeholder="1234 5678 9012 3456" class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" required pattern="^\d{4}\s\d{4}\s\d{4}\s\d{4}$" />
+          <div *ngIf="paymentForm.get('cardNumber')?.invalid && (paymentForm.get('cardNumber')?.dirty || paymentForm.get('cardNumber')?.touched)" class="text-red-500 text-sm mt-1">
+            Please enter a valid card number.
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4 mb-6">
+          <div>
+            <label for="expiryDate" class="block text-sm font-medium text-gray-700">Expiry Date</label>
+            <input type="text" id="expiryDate" name="expiryDate" formControlName="expiryDate" placeholder="MM/YY" class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" required pattern="^(0[1-9]|1[0-2])\/\d{2}$" />
+            <div *ngIf="paymentForm.get('expiryDate')?.invalid && (paymentForm.get('expiryDate')?.dirty || paymentForm.get('expiryDate')?.touched)" class="text-red-500 text-sm mt-1">
+              Please enter a valid expiry date (MM/YY).
+            </div>
+          </div>
+          <div>
+            <label for="cvv" class="block text-sm font-medium text-gray-700">CVV</label>
+            <input type="text" id="cvv" name="cvv" formControlName="cvv" placeholder="123" class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" required pattern="^\d{3}$" />
+            <div *ngIf="paymentForm.get('cvv')?.invalid && (paymentForm.get('cvv')?.dirty || paymentForm.get('cvv')?.touched)" class="text-red-500 text-sm mt-1">
+              Please enter a valid CVV (3 digits).
+            </div>
+          </div>
+        </div>
+        <div class="mb-6">
+          <label for="cardHolder" class="block text-sm font-medium text-gray-700">Cardholder Name</label>
+          <input type="text" id="cardHolder" name="cardHolder" formControlName="cardHolder" placeholder="John Doe" class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" required />
+          <div *ngIf="paymentForm.get('cardHolder')?.invalid && (paymentForm.get('cardHolder')?.dirty || paymentForm.get('cardHolder')?.touched)" class="text-red-500 text-sm mt-1">
+            Please enter the cardholder's name.
+          </div>
+        </div>
+        <button type="submit" [disabled]="paymentForm.invalid" class="bg-maroon text-white p-2 rounded-md hover:text-gold-dark focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Purchase Now</button>
+      </form>
+    </div>
+  </div>
+  

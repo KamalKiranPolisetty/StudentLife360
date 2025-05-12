@@ -1,0 +1,183 @@
+<!-- <nav class="bg-gray-900 text-white p-4 md:sticky md:top-0">
+  <div class="container mx-auto flex justify-between items-center flex-wrap">
+    <div class="flex items-center flex-1">
+      <a routerLink="/" class="text-2xl font-bold mr-auto md:mb-0 md:mr-0"
+        >Student Activity App</a
+      >
+      <button class="block md:hidden focus:outline-none">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          ></path>
+        </svg>
+      </button>
+    </div>
+    <ul
+      class="flex flex-col mt-4 md:mt-0 md:flex md:flex-row md:items-center md:space-x-4 md:flex-1 md:justify-end md:flex-auto md:space-y-0"
+    >
+      <ng-container *ngIf="!loggedIn">
+        <li>
+          <a
+            routerLink="/"
+            class="block md:inline-block hover:text-blue-500 transition duration-300"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/login"
+            class="block md:inline-block hover:text-blue-500 transition duration-300"
+            >Login</a
+          >
+        </li>
+      </ng-container>
+      <ng-container *ngIf="loggedIn">
+        <li>
+          <a
+            routerLink="/"
+            class="block md:inline-block hover:text-blue-500 transition duration-300"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/textbook"
+            class="block md:inline-block hover:text-blue-500 transition duration-300"
+            >Books</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="roommate"
+            class="block md:inline-block hover:text-blue-500 transition duration-300"
+            >Roommate</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="people"
+            class="block md:inline-block hover:text-blue-500 transition duration-300"
+            >People</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/profile"
+            class="block md:inline-block hover:text-blue-500 transition duration-300"
+            >Profile</a
+          >
+        </li>
+        <li>
+          <a
+            (click)="logout()"
+            class="border-2 border-orange-800 p-2 rounded block md:inline-block hover:text-blue-500 transition duration-300"
+            >Logout</a
+          >
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet> -->
+
+<nav class="bg-maroon text-white p-4 md:sticky md:top-0">
+  <div class="container mx-auto flex justify-between items-center flex-wrap">
+    <div class="flex items-center flex-1">
+      <a routerLink="/" class="text-2xl font-bold mr-auto md:mb-0 md:mr-0"
+        >StudentLife360</a
+      >
+      <button class="block md:hidden focus:outline-none">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          ></path>
+        </svg>
+      </button>
+    </div>
+    <ul
+      class="flex flex-col mt-4 md:mt-0 md:flex md:flex-row md:items-center md:space-x-4 md:flex-1 md:justify-end md:flex-auto md:space-y-0"
+    >
+      <ng-container *ngIf="!loggedIn">
+        <li>
+          <a
+            routerLink="/"
+            class="block md:inline-block hover:text-gold-dark transition duration-300"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/login"
+            class="block md:inline-block hover:text-gold-dark transition duration-300"
+            >Login</a
+          >
+        </li>
+      </ng-container>
+      <ng-container *ngIf="loggedIn">
+        <li>
+          <a
+            routerLink="/"
+            class="block md:inline-block hover:text-gold-dark transition duration-300"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/textbook"
+            class="block md:inline-block hover:text-gold-dark transition duration-300"
+            >Books</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="roommate"
+            class="block md:inline-block hover:text-gold-dark transition duration-300"
+            >Roommate</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="people"
+            class="block md:inline-block hover:text-gold-dark transition duration-300"
+            >People</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/profile"
+            class="block md:inline-block hover:text-gold-dark transition duration-300"
+            >Profile</a
+          >
+        </li>
+        <li>
+          <a
+            (click)="logout()"
+            class="border-2 border-orange-800 p-2 rounded block md:inline-block hover:text-gold-dark transition duration-300"
+            >Logout</a
+          >
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

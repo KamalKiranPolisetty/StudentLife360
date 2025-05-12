@@ -1,0 +1,53 @@
+<!-- <div class="min-h-screen mx-auto">
+    <h2 class="text-xl font-bold mb-4">Vote for Candidate</h2>
+    <form [formGroup]="voteForm" (ngSubmit)="onSubmit()" class="mb-4">
+      <div class="flex items-center mb-2">
+        <label for="candidate" class="mr-2">Select Candidate:</label>
+        <select formControlName="candidate" class="rounded-md px-2 py-1 border border-gray-300">
+          <option value="Kamal">Kamal</option>
+          <option value="Prithvi">Prithvi</option>
+          <option value="Rajasekhar">Rajasekhar</option>
+          <option value="Parthu">Parthu</option>
+          <option value="Dilip">Dilip</option>
+        </select>
+      </div>
+      <button type="submit" [disabled]="!voteForm.valid" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Submit Vote</button>
+    </form>
+  
+    <h2 class="text-xl font-bold mb-4">Poll Results</h2>
+    <ul>
+      <li *ngFor="let result of pollResults" class="my-2 p-2 bg-gray-100 rounded-md">
+        {{ result.candidate }} - Votes: {{ result.votes }}
+      </li>
+    </ul>
+  </div>
+   -->
+
+
+   <div class="min-h-screen mx-auto p-8 bg-white rounded-lg shadow-lg max-w-2xl">
+    <h2 class="text-2xl text-maroon mb-6">Vote for Candidate</h2>
+    <form [formGroup]="voteForm" (ngSubmit)="onSubmit()" class="mb-8">
+      <div class="flex flex-col sm:flex-row items-center mb-4">
+        <label for="candidate" class="block text-sm font-medium text-maroon mr-4 mb-2 sm:mb-0">
+          Select Candidate:
+        </label>
+        <select formControlName="candidate" class="flex-1 rounded-md px-4 py-2 border border-gold-dark">
+          <option value="Kamal">Kamal</option>
+          <option value="Prithvi">Prithvi</option>
+          <option value="Rajasekhar">Rajasekhar</option>
+          <option value="Parthu">Parthu</option>
+          <option value="Dilip">Dilip</option>
+        </select>
+      </div>
+      <button type="submit" [disabled]="!voteForm.valid" class=" bg-maroon text-white px-4 py-2 rounded-md hover:text-gold-dark">
+        Submit Vote
+      </button>
+    </form>
+  
+    <h2 class="text-2xl text-maroon mb-4">Poll Results</h2>
+    <ul>
+      <li *ngFor="let result of pollResults" class="my-2 p-4 bg-gray-100 rounded-md shadow text-maroon">
+        <span class="font-semibold">{{ result.candidate }}:</span> Votes: {{ result.votes }}
+      </li>
+    </ul>
+  </div>

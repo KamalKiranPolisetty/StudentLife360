@@ -1,0 +1,72 @@
+<div *ngIf="showBusTicketsSection" class="container min-h-screen mx-auto my-8">
+  <button (click)="showBusCards()" class="bg-maroon text-white px-4 py-2 rounded-md hover:text-gold-dark focus:outline-none focus:ring-2 focus:ring-gold-dark focus:ring-offset-2">
+    Purchase Bus Cards
+  </button>
+  <h2 class="text-2xl font-semibold mb-4">Purchase Bus Tickets</h2>
+
+  <div class="mb-4">
+    <label class="block text-sm font-medium text-gray-700">Zones:</label>
+    <div class="flex space-x-4">
+      <input type="checkbox" id="zone1" name="zone1" [(ngModel)]="zone1Selected" (change)="updateZones('Zone1')" class="mt-1 form-checkbox">
+      <label for="zone1">Zone 1</label>
+
+      <input type="checkbox" id="zone2" name="zone2" [(ngModel)]="zone2Selected" (change)="updateZones('Zone2')" class="mt-1 form-checkbox">
+      <label for="zone2">Zone 2</label>
+
+      <input type="checkbox" id="zone3" name="zone3" [(ngModel)]="zone3Selected" (change)="updateZones('Zone3')" class="mt-1 form-checkbox">
+      <label for="zone3">Zone 3</label>
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <label for="quantity" class="block text-sm font-medium text-gray-700">Quantity:</label>
+    <input type="number" id="quantity" [(ngModel)]="quantity" class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+  </div>
+  
+  
+  <button (click)="purchaseTickets()" class="bg-maroon text-white px-4 py-2 rounded-md hover:text-gold-dark focus:outline-none focus:ring-2 focus:ring-gold-dark focus:ring-offset-2">Purchase Tickets</button>
+
+  <div *ngIf="purchasedTicket" class="mt-4">
+    <h3 class="text-lg font-semibold mb-2">Purchased Ticket Details:</h3>
+    <div class="bg-white p-4 rounded-lg shadow-md">
+      <p>UserID: {{ purchasedTicket.userId }}</p>
+      <p>Zone(s): {{ purchasedTicket.zones.join(', ') }}</p>
+      <p>Quantity: {{ purchasedTicket.quantity }}</p>
+      <p>Total Price: ${{ purchasedTicket.totalPrice }}</p>
+      <p>Created At: {{ purchasedTicket.createdAt | date }}</p>
+      <p>Updated At: {{ purchasedTicket.updatedAt | date }}</p>
+    </div>
+  </div>
+
+  <div *ngIf="errorMessage" class="text-red-500 mt-4">{{ errorMessage }}</div>
+</div>
+
+
+
+
+
+
+<div *ngIf="showBusCardsSection" class="container min-h-screen mx-auto my-8">
+  <button (click)="showBusTickets()" class="bg-maroon hover:text-gold-dark text-white py-2 px-4 mb-8 rounded">
+    Purchase Bus Tickets
+  </button>
+  <h2 class="text-2xl font-semibold mb-4">Purchase Bus Cards</h2>
+
+  <div class="mb-4">
+    <label class="block text-sm font-medium text-maroon">Quantity:</label>
+    <input type="number" id="quantity" [(ngModel)]="cardsquantity" class="mt-1 form-input">
+  </div>
+  
+  
+  <button (click)="purchaseCard()" class="bg-maroon text-white px-4 py-2 rounded-md hover:text-gold-dark focus:outline-none focus:ring-2 focus:ring-gold-dark focus:ring-offset-2">Purchase Card</button>
+
+  <div *ngIf="purchasedCard">
+    <h3 class="text-lg font-semibold mt-4">Purchased Bus Card Details:</h3>
+    <p>Card ID: {{ purchasedCard._id }}</p>
+    <p>Quantity: {{ purchasedCard.quantity }}</p>
+    <p>Total Price: {{ purchasedCard.totalPrice }}</p>
+  </div>
+
+  <div *ngIf="cardserrorMessage" class="text-red-500 mt-4">{{ cardserrorMessage }}</div>
+</div>
+

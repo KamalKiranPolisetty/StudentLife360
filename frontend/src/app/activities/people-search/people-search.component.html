@@ -1,0 +1,112 @@
+<!-- <div class="min-h-screen flex flex-col bg-gray-100">
+  <div class="flex-none h-1/4 bg-white max-w-4xl mx-auto p-8 rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Search People</h2>
+    <div class="flex flex-col md:flex-row md:space-x-4">
+      <div class="w-full md:w-1/3">
+        <label for="firstName" class="block text-sm font-medium text-gray-700">First Name:</label>
+        <input type="text" id="firstName" [(ngModel)]="firstName" class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+      </div>
+      <div class="w-full md:w-1/3">
+        <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name:</label>
+        <input type="text" id="lastName" [(ngModel)]="lastName" class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+      </div>
+      <div class="w-full md:w-1/3">
+        <label for="department" class="block text-sm font-medium text-gray-700">Department:</label>
+        <input type="text" id="department" [(ngModel)]="department" class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+      </div>
+    </div>
+    <button (click)="search()" class="mt-6 bg-indigo-600 text-white p-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Search</button>
+  </div>
+
+  <div *ngIf="searchResult" class="flex-auto max-w-4xl mx-auto mt-2">
+    <h2 class="text-2xl font-semibold text-gray-800 mt-4">Search Result:</h2>
+    <ul class="mt-2 border-t border-gray-200 divide-y divide-gray-200">
+      <li *ngFor="let user of searchResult" class="py-4">
+        <div class="flex items-center">
+          <div class="ml-4">
+            <p class="text-lg font-medium text-gray-900">{{ user.firstName }} {{ user.lastName }}</p>
+            <p class="text-base text-gray-500">{{ user.email }}</p>
+            <p class="text-base text-gray-500">{{ user.department }}</p>
+            <p class="text-base text-gray-500">{{ user.address }}, {{ user.city }}, {{ user.state }} {{ user.zipCode }}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div> -->
+<!-- <div class="min-h-screen flex flex-col bg-gray-100">
+  <div class="flex-none h-1/4 bg-white max-w-4xl mx-auto p-8 rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Search People</h2>
+    <div class="flex flex-col md:flex-row md:space-x-4">
+      <div class="w-full md:w-1/3">
+        <label for="firstName" class="block text-sm font-medium text-gray-700">First Name:</label>
+        <input type="text" id="firstName" [(ngModel)]="firstName" class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+      </div>
+      <div class="w-full md:w-1/3">
+        <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name:</label>
+        <input type="text" id="lastName" [(ngModel)]="lastName" class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+      </div>
+      <div class="w-full md:w-1/3">
+        <label for="department" class="block text-sm font-medium text-gray-700">Department:</label>
+        <input type="text" id="department" [(ngModel)]="department" class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+      </div>
+    </div>
+    <button (click)="search()" class="mt-6 bg-indigo-600 text-white p-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Search</button>
+  </div>
+
+  <div *ngIf="searchResult" class="flex-auto max-w-4xl mx-auto mt-2">
+    <h2 class="text-2xl font-semibold text-gray-800 mt-4">Search Result:</h2>
+    <ul class="mt-2 border-t border-gray-200 divide-y divide-gray-200">
+      <li *ngFor="let user of searchResult" class="py-4">
+        <div class="flex items-center">
+          <div class="ml-4">
+            <p class="text-lg font-medium text-gray-900">{{ user.firstName }} {{ user.lastName }}</p>
+            <p class="text-base text-gray-500">{{ user.email }}</p>
+            <p class="text-base text-gray-500">{{ user.department }}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div> -->
+<div class="min-h-screen flex flex-col text-maroon">
+  <div class="flex-none h-1/4 bg-white max-w-4xl mx-auto p-8 rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold text-maroon mb-6">Search People</h2>
+    <div class="flex flex-col md:flex-row md:space-x-4">
+      <div class="w-full md:w-1/3">
+        <label for="firstName" class="block text-sm font-medium text-maroon">First Name:</label>
+        <input type="text" id="firstName" [(ngModel)]="firstName" class="mt-1 p-2 block w-full border border-gold-dark rounded-md ">
+      </div>
+      <div class="w-full md:w-1/3">
+        <label for="lastName" class="block text-sm font-medium text-maroon">Last Name:</label>
+        <input type="text" id="lastName" [(ngModel)]="lastName" class="mt-1 p-2 block w-full border border-gold-dark rounded-md">
+      </div>
+      <div class="w-full md:w-1/3">
+        <label for="department" class="block text-sm font-medium text-maroon">Department:</label>
+        <input type="text" id="department" [(ngModel)]="department" class="mt-1 p-2 block w-full border border-gold-dark rounded-md ">
+      </div>
+    </div>
+    <button (click)="search()" class="mt-6 bg-maroon text-white p-2 rounded-md hover:bg-dark-gold hover:text-gold-dark ">Search</button>
+
+  </div>
+
+  <!-- Results Section -->
+  <div *ngIf="searchResult && searchResult.length > 0" class="flex-auto max-w-4xl mx-auto mt-4">
+    <h2 class="text-2xl font-semibold text-gray-800">Search Result:</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-2">
+      <div *ngFor="let user of searchResult" class="bg-white p-4 rounded-lg shadow">
+        <div class="flex items-center space-x-4">
+          <!-- <img src="https://via.placeholder.com/50" alt="User" class="rounded-full"> Placeholder for user avatar -->
+          <div>
+            <p class="text-lg font-medium text-gray-900">{{ user.firstName }} {{ user.lastName }}</p>
+            <p class="text-sm text-gray-500">{{ user.email }}</p>
+            <p class="text-sm text-gray-500">{{ user.department }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="searchResult && searchResult.length === 0" class="max-w-4xl mx-auto mt-4">
+    <p class="text-gray-800">No results found.</p>
+  </div>
+</div>

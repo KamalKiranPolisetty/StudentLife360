@@ -1,0 +1,119 @@
+<!-- <div class="textbook-search min-h-screen max-w-lg mx-auto p-8 bg-white rounded shadow-lg">
+  <h2 class="text-2xl font-bold mb-4">Search Textbooks</h2>
+  <form
+    class="mb-4"
+    (submit)="searchTextbooks(title.value, author.value, isbn.value)"
+  >
+    <div class="flex mb-4">
+      <div class="w-1/3">
+        <label for="title" class="block text-sm font-medium text-gray-700"
+          >Title:</label
+        >
+        <input
+          type="text"
+          id="title"
+          #title
+          class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+        />
+      </div>
+      <div class="w-1/3 ml-4">
+        <label for="author" class="block text-sm font-medium text-gray-700"
+          >Author:</label
+        >
+        <input
+          type="text"
+          id="author"
+          #author
+          class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+        />
+      </div>
+      <div class="w-1/3 ml-4">
+        <label for="isbn" class="block text-sm font-medium text-gray-700"
+          >ISBN:</label
+        >
+        <input
+          type="text"
+          id="isbn"
+          #isbn
+          class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+        />
+      </div>
+    </div>
+    <button
+      type="submit"
+      class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+    >
+      Search
+    </button>
+  </form>
+
+  <div *ngIf="errorMessage" class="text-red-500">{{ errorMessage }}</div>
+
+  <div *ngIf="textbooks.length > 0" class="mt-4">
+    <h3 class="text-xl font-bold mb-2">Found Textbooks:</h3>
+    <ul>
+      <li *ngFor="let textbook of textbooks" class="mb-2">
+        <strong>Title:</strong> {{ textbook.title }} <br />
+        <strong>Author:</strong> {{ textbook.author }} <br />
+        <strong>ISBN:</strong> {{ textbook.isbn }} <br />
+        <strong>Library Location:</strong>
+        {{ textbook.libraryLocation || "N/A" }} <br />
+        <strong>Bookstore Name:</strong> {{ textbook.bookstoreName || "N/A" }}
+        <br />
+      </li>
+    </ul>
+  </div>
+
+  <div
+    *ngIf="textbooks.length === 0 && !errorMessage"
+    class="text-gray-500 mt-4"
+  >
+    No textbooks found.
+  </div>
+</div> -->
+
+<div class="textbook-search min-h-screen max-w-lg mx-auto p-8 bg-white rounded shadow-lg">
+  <h2 class="text-2xl font-bold mb-4 text-maroon">Search Textbooks</h2>
+  <form class="mb-4" (submit)="searchTextbooks(title.value, author.value, isbn.value)">
+    <div class="flex flex-wrap -mx-2">
+      <div class="w-full md:w-1/3 px-2 mb-4 md:mb-0">
+        <label for="title" class="block text-sm font-medium text-maroon">Title:</label>
+        <input type="text" id="title" #title
+          class="mt-1 p-2 block w-full border border-gold-dark rounded-md "/>
+      </div>
+      <div class="w-full md:w-1/3 px-2 mb-4 md:mb-0">
+        <label for="author" class="block text-sm font-medium text-maroon">Author:</label>
+        <input type="text" id="author" #author
+          class="mt-1 p-2 block w-full border border-gold-dark rounded-md"/>
+      </div>
+      <div class="w-full md:w-1/3 px-2">
+        <label for="isbn" class="block text-sm font-medium text-maroon">ISBN:</label>
+        <input type="text" id="isbn" #isbn
+          class="mmt-1 p-2 block w-full border border-gold-dark rounded-md"/>
+      </div>
+    </div>
+    <button type="submit"
+      class="mt-4 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-maroon hover:text-gold-dark">
+      Search
+    </button>
+  </form>
+
+  <div *ngIf="errorMessage" class="text-red-500">{{ errorMessage }}</div>
+
+  <div *ngIf="textbooks.length > 0" class="mt-4">
+    <h3 class="text-xl font-bold mb-2">Found Textbooks:</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div *ngFor="let textbook of textbooks" class="bg-white p-4 rounded-lg shadow">
+        <p><strong>Title:</strong> {{ textbook.title }}</p>
+        <p><strong>Author:</strong> {{ textbook.author }}</p>
+        <p><strong>ISBN:</strong> {{ textbook.isbn }}</p>
+        <p><strong>Library Location:</strong> {{ textbook.libraryLocation || "N/A" }}</p>
+        <p><strong>Bookstore Name:</strong> {{ textbook.bookstoreName || "N/A" }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="textbooks.length === 0 && !errorMessage" class="text-gray-500 mt-4">
+    No textbooks found.
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="container min-h-screen mx-auto my-8">
+    <h2 class="text-2xl font-semibold mb-4">Find Roommates</h2>
+    
+    
+    <form (ngSubmit)="searchRoommates(moveInDate, gender, priceRange)" #searchForm="ngForm">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+          <label for="moveInDate" class="block text-sm font-medium text-maroon">Move-In Date:</label>
+          <input type="date" id="moveInDate" name="moveInDate" [(ngModel)]="moveInDate" class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+        </div>
+        <div>
+          <label for="gender" class="block text-sm font-medium text-maroon">Gender:</label>
+          <select id="gender" name="gender" [(ngModel)]="gender" class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <div>
+          <label for="priceRange" class="block text-sm font-medium text-maroon">Price Range:</label>
+          <input type="number" id="priceRange" name="priceRange" [(ngModel)]="priceRange" class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+        </div>
+      </div>
+      <button type="submit" class="mt-6 bg-maroon text-white p-2 rounded-md hover:text-gold-dark ">Search</button>
+    </form>
+  
+    <div *ngIf="roommates && roommates.length > 0" class="mt-8">
+        <h3 class="text-lg font-semibold mb-2">Search Results:</h3>
+        <ul>
+          <li *ngFor="let roommate of roommates" class="mb-4">
+            <div class="bg-white p-4 rounded-lg shadow-md">
+              <p class="text-lg font-semibold">Move-In Date: {{ roommate.moveInDate | date }}</p>
+              <p>Gender: {{ roommate.gender }}</p>
+              <p>Approximate Price: ${{ roommate.approximatePrice }}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div *ngIf="!roommates || roommates.length === 0" class="mt-8">
+        <p class="text-lg font-semibold">No roommates found.</p>
+      </div>
+  </div>
+  

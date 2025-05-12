@@ -1,0 +1,14 @@
+Title,Author,ISBN,Available in Library,Library Location,Bookstore Name
+Clean Code: A Handbook of Agile Software Craftsmanship,Robert C. Martin,9780132350884,true,Software Engineering Section,Coding Central
+Design Patterns: Elements of Reusable Object-Oriented Software,"Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",9780201633610,true,Software Engineering Section,Software Design Store
+Operating System Concepts,"Abraham Silberschatz, Peter B. Galvin, Greg Gagne",9781118129388,true,Computer Science Section,OS Books Inc.
+Database System Concepts,"Abraham Silberschatz, Henry F. Korth, S. Sudarshan",9780073523323,true,Computer Science Section,DB Solutions
+Artificial Intelligence: A Modern Approach,"Stuart Russell, Peter Norvig",9780136042594,true,Computer Science Section,AI Bookstore
+Computer Networks,"Andrew S. Tanenbaum, David J. Wetherall",9780132126953,true,Computer Science Section,Networking Hub
+Introduction to the Theory of Computation,Michael Sipser,9781133187790,true,Computer Science Section,Theory Books Inc.
+Data Structures and Algorithms in Python,"Michael T. Goodrich, Roberto Tamassia, Michael H. Goldwasser",9781118290279,true,Computer Science Section,Python Books Galore
+Computer Organization and Design,"David A. Patterson, John L. Hennessy",9780123747501,true,Computer Science Section,CompOrg Books
+Programming Language Pragmatics,Michael L. Scott,9780124104099,true,Computer Science Section,PLP Books
+Software Engineering: A Practitioner's Approach,Roger S. Pressman,9780078022128,true,Software Engineering Section,SE Books Shop
+Introduction to Data Mining,"Pang-Ning Tan, Michael Steinbach, Vipin Kumar",9780133128901,true,Computer Science Section,Data Mining Mart
+Discrete Mathematics and Its Applications,Kenneth H. Rosen,9780073383095,true,Mathematics Section,Discrete Books Depot
