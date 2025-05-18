@@ -1,4 +1,4 @@
-# 🎓 StudentLife360.
+# 🎓 StudentLife360
 
 [![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
