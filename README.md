@@ -12,7 +12,7 @@ StudentLife360 is a comprehensive web platform designed specifically for univers
 
 ## ✨ Key Features
 
-- **📚 Textbook Marketplace** - Search, buy, and sell textbooks with other students
+- **📚 Textbook Marketplace** - Search, buy, and sell textbooks with other studentss
 - **🏠 Roommate Matching** - Find compatible roommates based on preferences
 - **🍽️ Meal Plan Management** - Purchase and manage campus meal plans
 - **🚌 Transportation Services** - Buy bus tickets for different zones
